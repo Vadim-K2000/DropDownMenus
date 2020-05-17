@@ -1,1 +1,63 @@
 @import "reset.css";
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    font-size: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.navListItem {
+    --primal-color: #47996D;
+    --secondary-color: #3B805B;
+
+    display: inline-block;
+    background-color: var(--primal-color);
+    border: solid 1px var(--secondary-color);
+    color: white;
+    position: relative;
+}
+
+.navListItem:hover {
+    background-color: var(--secondary-color);
+}
+
+.navListItem:hover > .navListSubmenu {
+    display: block;
+}
+
+
+
+.navListA {
+    text-decoration: none;
+    border: solid 1px #3B805B;
+    padding: 20px;
+    color: inherit;
+    text-align: center;
+    display: block;
+    width: 200px;
+    font-size: 1.4rem;
+}
+
+.navListSubmenu {
+    position: absolute;
+    display: none;
+}
+
+.navListSubmenuLvl1 {
+    top: 100%;
+}
+
+.navListSubmenuLvl2 {
+    left: 100%;
+    top: -2px;
+}
+
+p {
+    font-size: 1.2em;
+}
